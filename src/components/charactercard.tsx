@@ -7,24 +7,26 @@ import {
   CardTitle,
 } from "./ui/card";
 import Link from "next/link";
+
 export const Charactercard = ({ name, gender, id, image, species, status }) => {
   return (
     <Link href={`/characters/${id}`}>
-      <Card>
+      <Card className="grid grid-col gap-4 h-full w-full hover:shadow-lg transition-shadow duration-300">
         <CardHeader>
           <CardTitle>{name}</CardTitle>
-          <CardDescription>{image}</CardDescription>
+          <CardDescription>
+            <img
+              src={image}
+              alt={`${name} thumbnail`}
+              className="w-full h-full object-cover rounded"
+            />
+          </CardDescription>
         </CardHeader>
         <CardContent>
-          {
-            <>
-              <h1>{gender}</h1>
-              <p>{id}</p>
-              <h2>{image}</h2>
-              <h3>{species}</h3>
-              <h4>{status}</h4>
-            </>
-          }
+          <h1 className="font-semibold">{gender}</h1>
+          <p>ID: {id}</p>
+          <h3>{species}</h3>
+          <h4 className="text-sm text-muted-foreground">{status}</h4>
         </CardContent>
       </Card>
     </Link>
