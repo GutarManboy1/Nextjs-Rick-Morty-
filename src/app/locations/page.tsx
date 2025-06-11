@@ -7,12 +7,13 @@ export default async function LocationsPage() {
   return (
     <main className="p-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {locations.map(({ id, name, image }) => (
+        {locations.map(({ id, name, dimension, residents}) => (
           <Locationcards
             key={id}
             id={id}
             name={name}
-            image={null} // No episode images from API
+            dimension = { dimension}
+            residents = {residents}
           />
         ))}
       </div>

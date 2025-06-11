@@ -32,12 +32,12 @@ Create a small Next.js application that:
    - The search bar should live at the top level (e.g., layout or a shared component), and its results should be accessible on all list pages.
    - Avoid re-fetching data unnecessarily when filtering results.
 
-3. **List Pages (Characters, Locations, Episodes)**
+<!-- 3. **List Pages (Characters, Locations, Episodes)**
 
    - Each should be a **server component**.
    - Use **server actions** to fetch and render a list of items with:
      - Basic information (name, type, etc.)
-     - Image (if available)
+     - Image (if available) -->
 
 4. **Search Behavior**
 
