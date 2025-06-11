@@ -18,5 +18,7 @@ export const getEpisodes = async () => {
 
 // this is a function expression
 export const getLocations = async () => {
-  return fetch("https://rickandmortyapi.com/api/location");
+  const res = await fetch("https://rickandmortyapi.com/api/location");
+  const locationData = await res.json();
+  return locationData.results;
 };

@@ -1,9 +1,21 @@
-import React from 'react'
+import { getLocations } from "@/actions/index";
+import { Locationcards } from "@/components/locationcards";
 
-const LocationPage = () => {
+export default async function LocationsPage() {
+  const locations = await getLocations();
+
   return (
-    <div>Locations</div>
-  )
+    <main className="p-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {locations.map(({ id, name, image }) => (
+          <Locationcards
+            key={id}
+            id={id}
+            name={name}
+            image={null} // No episode images from API
+          />
+        ))}
+      </div>
+    </main>
+  );
 }
-
-export default LocationPage
