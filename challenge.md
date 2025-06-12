@@ -26,11 +26,11 @@ Create a small Next.js application that:
      - Locations
      - Episodes -->
 
-2. **Search Functionality**
+<!-- 2. **Search Functionality**
 
    - Implement a **search bar** using **React Context**.
    - The search bar should live at the top level (e.g., layout or a shared component), and its results should be accessible on all list pages.
-   - Avoid re-fetching data unnecessarily when filtering results.
+   - Avoid re-fetching data unnecessarily when filtering results. -->
 
 <!-- 3. **List Pages (Characters, Locations, Episodes)**
 
@@ -39,16 +39,16 @@ Create a small Next.js application that:
      - Basic information (name, type, etc.)
      - Image (if available) -->
 
-4. **Search Behavior**
+<!-- 4. **Search Behavior**
 
-   - Typing in the search bar should **filter results locally** (client-side) without refetching data from the server.
-
+   - Typing in the search bar should **filter results locally** (client-side) without refetching data from the server. -->
+<!-- 
 5. **Detail Pages**
 
    - Clicking a list item should navigate to a detail view page:
      - `/characters/[id]`
      - `/locations/[id]`
-     - `/episodes/[id]`
+     - `/episodes/[id]` -->
 
 6. **Character Detail Page**
 

@@ -1,13 +1,12 @@
-import Link from "next/link";
-
+import { Navbar } from "@/components/navbar";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows items-center justify-items-center min-h-screen  gap-10 sm:p-20">
-      <h1 className="text-4xl">Welcome to The Rick and Morty API</h1>
-      <Link href="/characters">Characters</Link>
-      <Link href="/episodes">Episodes</Link>
-      <Link href="/locations">Locations</Link>
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <h1 className="text-4xl m-0">Welcome to The Rick and Morty API</h1>
+      <div className="mt-10">
+        <Navbar />
+      </div>
     </div>
   );
 }
