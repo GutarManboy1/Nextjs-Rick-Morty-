@@ -6,10 +6,12 @@ import { getCharacters } from "@/actions/index";
 import { Charactercard } from "@/components/charactercard";
 import { Navbar } from "@/components/navbar";
 import { Searchbar } from "@/components/searchbar";
+import { useSearch } from "@/context/SearchContext";
+
 
 const CharacterPage = () => {
   const [characters, setCharacters] = useState([]);
-  const [search, setSearch] = useState("");
+  const {search, setSearch} = useSearch();
   const searchParams = useSearchParams();
   const highlightId = searchParams.get("highlight");
   const [showOverlay, setShowOverlay] = useState(!!highlightId);
@@ -48,8 +50,8 @@ const CharacterPage = () => {
         <Navbar />
         <Searchbar
           placeholder="Search for a Character"
-          value={search}
-          onChange={setSearch}
+         
+         
         />
       </div>
 

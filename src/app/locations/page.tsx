@@ -5,10 +5,12 @@ import { getLocations } from "@/actions/index";
 import { Locationcards } from "@/components/locationcards";
 import { Navbar } from "@/components/navbar";
 import { Searchbar } from "@/components/searchbar";
+import { useSearch } from "@/context/SearchContext";
+
 
 export default function LocationsPage() {
   const [locations, setLocations] = useState([]);
-  const [search, setSearch] = useState("");
+  const {search, setSearch} = useSearch();
 
   useEffect(() => {
     const fetchLocations = async () => {
@@ -29,8 +31,7 @@ export default function LocationsPage() {
         <Navbar />
         <Searchbar
           placeholder="Search for a Location"
-          value={search}
-          onChange={setSearch}
+         
         />
       </div>
 

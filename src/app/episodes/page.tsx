@@ -1,15 +1,18 @@
 "use client"
 
 import { useEffect, useState } from "react";
+
 import { getEpisodesWithCharacters } from "@/actions/index";
 import { Episodecard } from "@/components/episodecard";
 import { Navbar } from "@/components/navbar";
 import { Searchbar } from "@/components/searchbar";
+import { useSearch } from "@/context/SearchContext";
+
 import { cn } from "@/lib/utils";
 
 export default function EpisodePage() {
   const [episodes, setEpisodes] = useState([]);
-  const [search, setSearch] = useState("");
+  const {search, setSearch} = useSearch();
 
   useEffect(() => {
     const fetchEpisodes = async () => {
@@ -30,8 +33,7 @@ export default function EpisodePage() {
         <Navbar />
         <Searchbar
           placeholder="Search for an Episode"
-          value={search}
-          onChange={setSearch}
+         
         />
       </div>
 
