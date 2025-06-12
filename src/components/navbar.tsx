@@ -27,16 +27,23 @@ export const Navbar = () => {
             </NavigationMenuLink>
           </NavigationMenuItem>
         )}
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link
-              href="/characters"
-              className="px-4 py-2 hover:text-primary transition-colors"
-            >
-              Characters
-            </Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+
+        {/* ✅ Only show "Characters" if NOT on /characters/[id]/episodes */}
+        {!pathname?.startsWith("/characters/") ||
+        (pathname?.includes("/characters") &&
+          !pathname?.includes("/episodes")) ? (
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <Link
+                href="/characters"
+                className="px-4 py-2 hover:text-primary transition-colors"
+              >
+                Characters
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        ) : null}
+
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
@@ -47,6 +54,7 @@ export const Navbar = () => {
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
@@ -61,3 +69,4 @@ export const Navbar = () => {
     </NavigationMenu>
   );
 };
+

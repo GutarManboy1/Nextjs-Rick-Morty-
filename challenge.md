@@ -26,11 +26,11 @@ Create a small Next.js application that:
      - Locations
      - Episodes -->
 
-<!-- 2. **Search Functionality**
+2. **Search Functionality**
 
-   - Implement a **search bar** using **React Context**.
+   - Implement a **search bar** using **React Context**.　Get this react context into it as well.
    - The search bar should live at the top level (e.g., layout or a shared component), and its results should be accessible on all list pages.
-   - Avoid re-fetching data unnecessarily when filtering results. -->
+   - Avoid re-fetching data unnecessarily when filtering results.
 
 <!-- 3. **List Pages (Characters, Locations, Episodes)**
 
@@ -42,31 +42,31 @@ Create a small Next.js application that:
 <!-- 4. **Search Behavior**
 
    - Typing in the search bar should **filter results locally** (client-side) without refetching data from the server. -->
-<!-- 
-5. **Detail Pages**
+
+<!-- 5. **Detail Pages**
 
    - Clicking a list item should navigate to a detail view page:
      - `/characters/[id]`
      - `/locations/[id]`
      - `/episodes/[id]` -->
 
-6. **Character Detail Page**
+<!-- 6. **Character Detail Page**
 
    - Display basic character information and image.
    - Render a **list of episode cards** where the character appears:
      - Each card should show the episode name and link to its detail page.
-   - Show the character’s **location information**, with a link to its corresponding location detail page.
+   - Show the character’s **location information**, with a link to its corresponding location detail page. -->
 
-7. **Episode Detail Page**
+<!-- 7. **Episode Detail Page**
 
    - Display basic episode information.
    - Show a **list of characters** featured in the episode.
-   - Each character name should link to its detail page.
+   - Each character name should link to its detail page. -->
 
-8. **Location Detail Page**
+<!-- 8. **Location Detail Page**
    - Display basic location information.
    - Render a **list of residents** (characters).
-   - Each resident name should link to the character’s detail page.
+   - Each resident name should link to the character’s detail page. -->
 
 ---
 

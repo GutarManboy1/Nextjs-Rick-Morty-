@@ -12,10 +12,10 @@ type SearchbarProps = {
 export const Searchbar = ({ placeholder, value, onChange }: SearchbarProps) => {
   return (
     <div className="flex w-full max-w-sm items-center gap-2">
-      <Input type="search" placeholder={placeholder} onChange={(e) => onChange(e.target.value)} />
-      <Button type="submit" variant="outline">
+      <Input type="search" placeholder={placeholder} onChange={(e) => onChange(e.target.value)} className="w-full h-10 text-center placeholder:text-center"/>
+      {/* <Button type="submit" variant="outline">
         Search
-      </Button>
+      </Button> */}
     </div>
   );
 };

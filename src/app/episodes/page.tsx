@@ -1,10 +1,11 @@
-"use client";
+"use client"
 
 import { useEffect, useState } from "react";
-import { getEpisodes } from "@/actions/index";
+import { getEpisodesWithCharacters } from "@/actions/index";
 import { Episodecard } from "@/components/episodecard";
 import { Navbar } from "@/components/navbar";
 import { Searchbar } from "@/components/searchbar";
+import { cn } from "@/lib/utils";
 
 export default function EpisodePage() {
   const [episodes, setEpisodes] = useState([]);
@@ -12,7 +13,7 @@ export default function EpisodePage() {
 
   useEffect(() => {
     const fetchEpisodes = async () => {
-      const data = await getEpisodes();
+      const data = await getEpisodesWithCharacters();
       setEpisodes(data);
     };
 
@@ -35,12 +36,14 @@ export default function EpisodePage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {filteredEpisodes.map(({ id, name }) => (
+        {filteredEpisodes.map(({ id, name, air_date, episode, characters }) => (
           <Episodecard
             key={id}
             id={id}
             name={name}
-            image={null} // or use a fallback image if desired
+            air_date={air_date}
+            episode={episode}
+            characters={characters} // now with full character objects
           />
         ))}
       </div>
