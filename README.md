@@ -1,3 +1,18 @@
+![Image](https://github.com/user-attachments/assets/6e1b8c91-7c77-4104-91b1-0a2664d373bf)
+Home
+
+![Image](https://github.com/user-attachments/assets/4f4fb3df-c390-40dd-8b16-9ba496cf4ccf)
+Characters
+
+![Image](https://github.com/user-attachments/assets/8db22919-52f5-46f2-a18d-3281cfd8b041)
+Episodes
+
+![Image](https://github.com/user-attachments/assets/571b2d59-79c8-415e-a60d-99a1a2deb8f8)
+Locations
+
+![Image](https://github.com/user-attachments/assets/92d79f54-0287-4ddf-82de-205af8d108cd)
+Episodes featuring....
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
