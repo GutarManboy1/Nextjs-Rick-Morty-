@@ -39,12 +39,11 @@ export const Charactercard = ({ name, gender, id, image, species, status }) => {
 
         <h4 className="text-sm text-muted-foreground">{status}</h4>
 
-        <div>
+        <div className="flex flex-wrap justify-between gap-2">
           <Button asChild>
             <Link href={`/characters/${id}/episodes`}>View Episodes</Link>
           </Button>
-        </div>
-        <div>
+
           <Button asChild>
             <Link href={`/characters/${id}/locations`}>View Locations</Link>
           </Button>
