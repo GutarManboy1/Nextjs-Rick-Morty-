@@ -139,3 +139,15 @@
   transform: translateZ(0);
   image-rendering: smooth;
 }
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: slowRotate 60s linear infinite;
+}
