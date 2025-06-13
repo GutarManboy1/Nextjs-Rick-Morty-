@@ -120,3 +120,22 @@
     @apply bg-background text-foreground;
   }
 }
+@keyframes ripple {
+  0%,
+  100% {
+    transform: scale(1);
+    /* filter: blur(2px); */
+  }
+  50% {
+    transform: scale(1.05);
+    /* filter: blur(4px); */
+  }
+}
+
+.ripple {
+  animation: ripple 6s ease-in-out infinite;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  image-rendering: smooth;
+}
