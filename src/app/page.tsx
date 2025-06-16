@@ -2,6 +2,7 @@
 import { Navbar } from "@/components/navbar";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import {ExpandingSpiral} from "@/components/expandingspiral";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -16,8 +17,12 @@ export default function Home() {
     }
     setIsPlaying(!isPlaying);
   };
+  
   return (
     <main className="relative min-h-screen overflow-hidden">
+     
+      <ExpandingSpiral />
+
       <Image
         src="/portal.webp"
         alt="portal"
@@ -27,14 +32,13 @@ export default function Home() {
 
       <audio ref={audioRef} loop src="/rick and morty.mp3" />
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
-       
-
         <Image
-         src="/font.png"
-         alt="font"
-         width={700}
-         height={700}
-         className=" m-0 backdrop-blur-md bg-black/40 p-4 rounded-2xl ripple shadow-lg" />
+          src="/font.png"
+          alt="font"
+          width={700}
+          height={700}
+          className="m-0 backdrop-blur-md bg-black/40 p-4 rounded-2xl ripple shadow-lg"
+        />
 
         <div className="mt-10">
           <Navbar />
@@ -48,8 +52,7 @@ export default function Home() {
           onClick={toggleAudio}
           className="absolute bottom-12 left-1 cursor-pointer transform transition duration-500 ease-in-out hover:scale-110"
         />
-          
       </div>
     </main>
-  );
+  )
 }
