@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Searchbar } from "@/components/searchbar";
-import { Button } from "@/components/ui/button"; // adjust path if needed
+import { Button } from "@/components/ui/button"; 
 
 type Props = {
   params: {

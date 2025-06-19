@@ -1,13 +1,14 @@
-// components/ExpandingSpiral.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export const ExpandingSpiral = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
+
     const ctx = canvas?.getContext("2d");
 
     if (!ctx) return;
@@ -56,19 +57,21 @@ export const ExpandingSpiral = () => {
     };
   }, []);
 
-  // Fade out after 3 seconds
+  // Fade out after 8 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setFadeOut(true), 3000);
+    const timer = setTimeout(() => setFadeOut(true), 20000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <motion.canvas
       ref={canvasRef}
-      style={{ position: "absolute", top: 0, left: 0, zIndex: -1 }}
+      style={{ position: "fixed", top: 0, left: 0, zIndex: 1 }}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: fadeOut ? 0 : 1 }}
       transition={{ duration: 2, ease: "easeOut" }}
     />
-  );
-}
+  )
+};
+
+export default ExpandingSpiral;
